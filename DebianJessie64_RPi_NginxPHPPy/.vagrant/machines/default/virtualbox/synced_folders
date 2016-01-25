@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/Volumes/stereo_2/VVT_VirtualEnvironments/DebianJessie64_RPi_NginxPHPPy","disabled":false,"owner":"vagrant","group":"vagrant"}}}

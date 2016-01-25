@@ -1,0 +1,3 @@
+server_tokens off;
+more_set_headers 'Server: Mine';
+add_header X-VVT-Built BK-1;

@@ -3,7 +3,7 @@
 #  bootstrapLoopTest.sh
 #  
 #
-#  Created by vtool on 12/12/14.
+#  Created by Vincent on 12/12/14.
 #
 repos_array=("ibm-us-open-2014" "land-rover-beyond-epic-2014.git" "Google-360" "airbnb-interactiveMap-2014" "airbnb-oneLessStranger-2014")
 

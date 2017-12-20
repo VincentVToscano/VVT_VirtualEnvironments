@@ -24,7 +24,7 @@ echo "#!/bin/sh"  >> /etc/update-motd.d/01-personal-messages
 echo 'echo -e "\x1B[01;95m ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ \x1B[0m"'  >> /etc/update-motd.d/01-personal-messages
 echo 'echo -e "\x1B[01;95m ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ \x1B[0m"'  >> /etc/update-motd.d/01-personal-messages
 echo 'echo -e "\x1B[01;95m ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ \x1B[0m"'  >> /etc/update-motd.d/01-personal-messages
-echo 'echo -e "\x1B[01;95m ▒ If you have any issues, contact vincent@toolofna.com"'  >> /etc/update-motd.d/01-personal-messages
+echo 'echo -e "\x1B[01;95m ▒ If you have any issues, contact Vincent"'  >> /etc/update-motd.d/01-personal-messages
 echo 'echo -e "\x1B[01;95m ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ \x1B[0m"'  >> /etc/update-motd.d/01-personal-messages
 echo 'echo -e "\x1B[01;95m ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ \x1B[0m"'  >> /etc/update-motd.d/01-personal-messages
 echo 'echo -e "\x1B[01;95m ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ \x1B[0m"'  >> /etc/update-motd.d/01-personal-messages

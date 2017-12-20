@@ -15,21 +15,18 @@ echo -e "\x1B[01;95m ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒�
 echo -e "\x1B[01;95m ▒ [STARTED] Shell initialization > System-wide configuration files \x1B[0m"
 echo -e "\x1B[01;95m ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ \x1B[0m"
 
-# >		Creates a file if it doesn't exist. If it exits, overwrites.
-# >>	Appends to file if it exists else creates file.
-
 # Fix Debian server and add dynamic motd.d just like in Ubuntu
-# create directory
+# Create directory
 mkdir /etc/update-motd.d/
 # change to new directory
 cd /etc/update-motd.d/
 # Create dynamic files
 touch 00-header 01-personal-messages
-# make files executable
+# Make executable
 chmod +x /etc/update-motd.d/*
-# remove MOTD file
+# Remove MOTD file
 rm /etc/motd
-# symlink dynamic MOTD file
+# Symlink dynamic MOTD file
 ln -s /var/run/motd /etc/motd
 
 # Add personal messages
@@ -37,7 +34,7 @@ echo "#!/bin/sh"  >> /etc/update-motd.d/01-personal-messages
 echo 'echo -e "\x1B[01;95m ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ \x1B[0m"'  >> /etc/update-motd.d/01-personal-messages
 echo 'echo -e "\x1B[01;95m ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ \x1B[0m"'  >> /etc/update-motd.d/01-personal-messages
 echo 'echo -e "\x1B[01;95m ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ \x1B[0m"'  >> /etc/update-motd.d/01-personal-messages
-echo 'echo -e "\x1B[01;95m ▒ If you have any issues, contact vincent@toolofna.com"'  >> /etc/update-motd.d/01-personal-messages
+echo 'echo -e "\x1B[01;95m ▒ If you have any issues, contact Vincent"'  >> /etc/update-motd.d/01-personal-messages
 echo 'echo -e "\x1B[01;95m ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ \x1B[0m"'  >> /etc/update-motd.d/01-personal-messages
 echo 'echo -e "\x1B[01;95m ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ \x1B[0m"'  >> /etc/update-motd.d/01-personal-messages
 echo 'echo -e "\x1B[01;95m ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ \x1B[0m"'  >> /etc/update-motd.d/01-personal-messages
@@ -69,7 +66,7 @@ echo "VHOST1_CONF=/etc/nginx/sites-available/${VHOST1}_${PROJ1}.conf" >> /etc/en
 echo "VHOST2_CONF=/etc/nginx/sites-available/${VHOST2}_${PROJ2}.conf" >> /etc/environment
 echo "VHOST3_CONF=/etc/nginx/sites-available/${VHOST3}_${PROJ3}.conf" >> /etc/environment
 echo "PHP_INI=/etc/php5/fpm/php.ini" >> /etc/environment
-# Edit: Removing /etc/bash.bashrc and switching to /etc/environment, great post http://unix.stackexchange.com/questions/117467/how-to-permanently-set-environmental-variables
+# Edit: Removing /etc/bash.bashrc and switching to /etc/environment – permanently set environmental variables
 . /etc/environment
 
 echo -e "\x1B[01;90m ▒ Check vars\x1B[0m"
@@ -101,15 +98,11 @@ echo -e "\x1B[01;95m ▒ [STARTED: Disabled !!!!!!!!!!!!!!!!!] Install build and
 echo -e "\x1B[01;95m ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ \x1B[0m"
 # https://help.ubuntu.com/community/AptGet/Howto
 
-# build-essential is available on Main repository for 14.04. So first enable repository. Didint use for RVM ruby
+# build-essential is available on Main repository for 14.04. So first enable repository. Not using this for RVM ruby.
 # sudo add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) main universe"
 
-# Run this command periodically to make sure your source list is up-to-date
 echo -e "\x1B[01;90m =========== Update source list =========== \x1B[0m"
 #sudo apt-get update
-
-#aptitude update
-#aptitude -y upgrade
 
 #sudo apt-get install -y git-core curl zlib1g-dev build-essential checkinstall python-software-properties
 echo -e "\x1B[01;95m ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ \x1B[0m"
@@ -141,8 +134,9 @@ adduser $USER1 --quiet --disabled-password --shell /bin/bash --home /home/$USER1
 adduser $USER2 --quiet --disabled-password --shell /bin/bash --home /home/$USER2 --gecos "Developer Two"
 
 # Set passwords
-echo -e "\x1B[01;90m =========== Set passwords =========== \x1B[0m"
-# Additonal usermod option -G SECONDARYGROUP1,SECONDARYGROUP2
+echo -e "\x1B[01;90m =========== Set temporary passwords =========== \x1B[0m"
+
+# Additional usermod option -G SECONDARYGROUP1,SECONDARYGROUP2
 usermod -G $GROUP1 -p $(openssl passwd -1 -salt shaker "london5") $USER1
 usermod -G $GROUP1 -p $(openssl passwd -1 -salt shaker "london55") $USER2
 #echo "dev1:london5" | chpasswd
@@ -181,11 +175,8 @@ rm -rf /var/www
 # Setup vhost directories
 echo -e "\x1B[01;90m =========== Setup vhost directories =========== \x1B[0m"
 
-# recursive mkdir for vhost1 / create any necessary parent directories
-mkdir -p /var/www/{$VHOST1,$VHOST2,$VHOST3}
-mkdir -p /var/www/$VHOST1/$PROJ1/www
-mkdir -p /var/www/$VHOST2/$PROJ2/www
-mkdir -p /var/www/$VHOST3/$PROJ3/www
+# Create any necessary directories
+mkdir -p /var/www/{$VHOST1,$VHOST2,$VHOST3}/{$PROJ1,$PROJ2,$PROJ3}/www
 
 # http://permissions-calculator.org/
 # Own it all chown -R $USER:teamwww /var/www
@@ -195,21 +186,18 @@ chown -R dev2:teamwww /var/www/$VHOST3
 
 #chmod -R 755 /var/www
 # 2 = all files and directories newly created within it inherit the group from that directory
-chmod -R 2775 /var/www/$VHOST1
-chmod -R 2775 /var/www/$VHOST2
-chmod -R 2775 /var/www/$VHOST3
+chmod -R 2775 /var/www/{$VHOST1,$VHOST2,$VHOST3}
 
 # Set user or group ID on execution
-chmod -R g+s /var/www/$VHOST1
-chmod -R g+s /var/www/$VHOST2
-chmod -R g+s /var/www/$VHOST3
+chmod -R g+s /var/www/{$VHOST1,$VHOST2,$VHOST3}
 
 # List directories
 echo -e "\x1B[01;90m =========== List directories =========== \x1B[0m"
-# '-print' arg is optional - it's default. also if a specific listing format is required it can be fed into xargs to run ls with any desired options, e.g. find /path/ -type d -print0 | xargs -0 -r ls -ld. Note the -print0 for NULL terminated output, and the matching -0 xargs arg
+# '-print' arg is optional - it's default. Also, if a specific listing format is required, it can be fed into xargs to run ls with any desired options, e.g. find /path/ -type d -print0 | xargs -0 -r ls -ld. Note the -print0 for NULL terminated output, and the matching -0 xargs arg
+# xargs: option -- r will only work on GNU-style command
 find /var/www/ -type d -print0 | xargs -0 -r ls -ld
 
-# Check octal permissions on vhost1
+# Check octal permissions on of virtual host directories
 echo -e "\x1B[01;90m =========== Check octal permissions on vhosts =========== \x1B[0m"
 stat -c "%a %n" /var/www/$VHOST1
 stat -c "%a %n" /var/www/$VHOST2
